@@ -1,0 +1,12 @@
+#!/bin/bash
+file1="try.txt"
+file2="Ram.txt"
+
+while read -r name; do
+if grep -Fxq "$name" "$file2"; then
+echo "Hello $name"
+else
+echo "Hii $name"
+fi
+done < "$file1"
+
